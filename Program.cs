@@ -45,7 +45,7 @@ namespace r
                 r.Lifebar = ms.ReadString();
                 r.TimeTicks = ms.ReadInt64();
                 r.ReplayLength = ms.ReadInt32();
-                r.ReplayData = ms.ReadBytes((int)(ms.BaseStream.Length - ms.BaseStream.Position - 8));
+                r.ReplayData = ms.ReadBytes(r.ReplayLength);
                 r.ReplayId = ms.ReadInt64();
             }
 
